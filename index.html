@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>streetdudes | Gender representation in Ulm street names</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+  <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet-src.js"></script>
+  <script src="dudes.geojson" type="text/javascript"></script>
+  <script src="gals.geojson" type="text/javascript"></script>
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+    }
+    html, body, #map {
+      height: 100%;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  <script>
+	  var attr_osm = 'Kartendaten &copy; <a href="http://openstreetmap.org/">OpenStreetMap</a>-Beitragende',
+      attr_bbs = '<a href="http://codefor.de">CfG-Kartenserver</a>';
+      
+    var bbs_ulm = new L.TileLayer('http://tiles.codefor.de/static/bbs/ulm/{z}/{x}/{y}.png', {opacity: 0.7, attribution: attr_osm});
+
+		var map = new L.Map('map').addLayer(bbs_ulm).setView(new L.LatLng(48.4018, 9.99), 14);
+
+var dudeStyle = {
+    "color": "#ff0000",
+    "weight": 5,
+    "opacity": 0.95
+};
+
+var galStyle = {
+    "color": "#0000ff",
+    "weight": 5,
+    "opacity": 0.95
+};
+
+function onEachFeature(feature, layer) {
+    // does this feature have a property named popupContent?
+    if (feature.properties && feature.properties.name) {
+        layer.bindPopup(feature.properties.name);
+    }
+}
+    var streets = new L.LayerGroup();
+    L.geoJson(dudes, { style: dudeStyle , onEachFeature: onEachFeature}).addTo(map);
+    L.geoJson(gals, {style: galStyle, onEachFeature: onEachFeature }).addTo(map);
+  </script>
+</body>
+</html>
+
