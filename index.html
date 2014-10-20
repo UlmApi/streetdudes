@@ -6,7 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
   <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+  <link rel="stylesheet" href="leaflet.label/leaflet.label.css" />
   <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet-src.js"></script>
+  <script src="leaflet.label/leaflet.label.js"></script>
   <script src="dudes.geojson" type="text/javascript"></script>
   <script src="gals.geojson" type="text/javascript"></script>
   <style>
@@ -45,7 +47,7 @@ var galStyle = {
 function onEachFeature(feature, layer) {
     // does this feature have a property named popupContent?
     if (feature.properties && feature.properties.name) {
-        layer.bindPopup(feature.properties.name);
+        layer.bindLabel(feature.properties.name);
     }
 }
     var streets = new L.LayerGroup();
