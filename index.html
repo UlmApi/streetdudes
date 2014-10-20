@@ -9,18 +9,149 @@
   <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet-src.js"></script>
   <script src="dudes.geojson" type="text/javascript"></script>
   <script src="gals.geojson" type="text/javascript"></script>
-  <style>
-    body {
-      padding: 0;
-      margin: 0;
-    }
-    html, body, #map {
-      height: 100%;
-      width: 100%;
-    }
-  </style>
+
+  <!-- fancybox -->
+  <link rel="stylesheet" href="./fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+  <script type="text/javascript" src="./fancybox/jquery.fancybox.pack.js"></script>
+
+   <style type="text/css">
+
+		.fancybox-custom .fancybox-skin {
+			box-shadow: 0 0 50px #222;
+		}
+
+   html, body, #map, h4, ul {
+      height:100%;
+      width:100%;
+      padding:0px;
+      margin:0px;
+      font-size:8pt;
+   } 
+   
+   h4{
+   	margin: 6px 0px;
+   }
+   
+   a {
+   color: #FEFEFE;
+   text-decoration:none;
+   font-style:italic;   
+   }
+
+	
+	#dialog a{
+   font-style:normal;   
+   font-weight: 600;
+	color: #333333;
+	font-family: sans;
+	} 
+
+	#title{
+	background:#333333;
+	position: fixed;
+	top:10px;
+	right:30px;
+	z-index:100;
+	color: #FEFEFE;
+	font-family: sans;
+	border: 1px solid #333;
+	margin:4px;
+	padding:4px;
+	filter: alpha(opacity=80);
+	-moz-opacity:0.8;
+	-khtml-opacity: 0.8;
+	opacity: 0.8;
+
+	border-radius: 4px;
+	-o-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	}   
+
+	#dialog{
+	width:400px;
+	display:none;
+	font-family: sans;
+	}   
+
+   
+	#legend{
+	width:250px;
+	background:#555555;
+	position: fixed;
+	bottom:30px;
+	right:30px;
+	z-index:100;
+	color: #EEEEEE;
+	font-family: sans;
+	border: 1px solid #EEEEEE;
+	margin:6px;
+	padding:6px;
+	filter: alpha(opacity=90);
+	-moz-opacity:0.9;
+	-khtml-opacity: 0.9;
+	opacity: 0.9;
+
+	border-radius: 6px;
+	-o-border-radius: 6px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	}   
+
+	.logos {
+		position:absolute;
+		bottom:10px;
+		left:10px;
+		z-index:99;
+	}
+
+	.logos img, #dialogdiv img {
+		border:1px solid #000;
+	}
+
+	.logos img:hover, #dialog div img {
+		border:1px solid #0084b0;
+	}
+
+   </style>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
+</script>
 </head>
 <body>
+   <div id="dialog">
+   <h4>&Uuml;ber dieses Projekt</h4>
+<p></p>
+
+<p>Dieses Projekt ist von der <a target="_blank" href="http://www.ulmapi.de">datalove-Gruppe / UlmAPI</a> im Rahmen des <a target="_blank" href="http://codeweek.eu/">CodeWeek.EU 2014</a> entwickelt worden. Der Quelltext der Seite befinden sich auf <a target="_blank" href="https://github.com/UlmApi/streetdudes">github</a>.</p>
+
+<h4>Kontakt</h4>
+<p>WWW: <a target="_blank" href="http://www.ulmapi.de">ulmapi.de</a><br/>
+Mail: datalove (at) uni-ulm.de <br/>
+Twitter: <a target="_blank" href="http://twitter.com/ulmapi">@ulmapi</a><br/>
+</p>
+   </div>
+
+   <div id="legend">
+	<h4>StreetDudes</h4>
+	<p>StreetDudes zeigt Straßen an, die nach Männer, bzw. Frauen genannt würden.</p>
+	<a href='#dialog' class='fancybox'>Mehr Informationen über diese Karte…</a>
+   <h4>Legende</h4>
+   <p>
+   <ul>
+   <li id="Mann"><b>Mann</b></li>
+   <li id="Frau"><b>Frau</b></li>
+   </ul>
+   </p>
+   </div>
+   
+   <div class="logos">
+      <a target="_blank" href="http://www.ulmapi.de"><img src="img/ulmapi.png" alt="ulmapi" title="Ein Projekt von datalove ulm / ulmAPI.de"></a>
+   </div>
+
+
   <div id="map"></div>
   <script>
 	  var attr_osm = 'Kartendaten &copy; <a href="http://openstreetmap.org/">OpenStreetMap</a>-Beitragende',
@@ -30,14 +161,17 @@
 
 		var map = new L.Map('map').addLayer(bbs_ulm).setView(new L.LatLng(48.4018, 9.99), 14);
 
+var dudeColor = "#998ec3";
+var galColor = "#f1a340";
+
 var dudeStyle = {
-    "color": "#998ec3",
+    "color": dudeColor,
     "weight": 5,
     "opacity": 0.75
 };
 
 var galStyle = {
-    "color": "#f1a340",
+    "color": galColor,
     "weight": 5,
     "opacity": 0.75
 };
@@ -51,6 +185,8 @@ function onEachFeature(feature, layer) {
     var streets = new L.LayerGroup();
     L.geoJson(dudes, { style: dudeStyle , onEachFeature: onEachFeature}).addTo(map);
     L.geoJson(gals, {style: galStyle, onEachFeature: onEachFeature }).addTo(map);
+    document.getElementById("Mann").style.color=dudeColor;
+    document.getElementById("Frau").style.color=galColor;
   </script>
 </body>
 </html>
