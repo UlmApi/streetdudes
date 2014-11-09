@@ -16,7 +16,7 @@ The basemap is made with the [ever-so-ubiquitous Leaflet,](http://leafletjs.com)
 
 ## Who was Wera, anyway?
 
-Unfortunately, the city's street catalogue lacks information on streets' name (m/p)atrons, or when a street was named. Upon request, the city of Ulm's Open Data team was quick as always with a reply – pointing us to one of the many project that [ZAWiW (Zentrum für allgemeine wissenschaftliche Weiterbildung)](http://uulm.de/?zawiw) at Ulm University had undertaken earlier, researching the female name-givers of streets in Ulm and Neu-Ulm.
+Unfortunately, the city's street catalogue lacks information on streets' name (m/p)atrons, or when a street was named. Upon request, the city of Ulm's Open Data team was quick as always with a reply – pointing us to one of the many projects that [ZAWiW (Zentrum für allgemeine wissenschaftliche Weiterbildung)](http://uulm.de/?zawiw) at Ulm University had undertaken earlier – in this case, researching the female name-givers of streets in Ulm and Neu-Ulm.
 
 ZAWiW promptly provided us with the result of this project: A book with in-depth stories about the women deemed notable enough to give their names to a street or plaza in Ulm. If you are interested and have a chance, please pick up this book (ISBN: 978-3-88294-404-4) and give it a read. We, for one, would never have thought that Werastraße was named after [Grand Duchess Vera Constantinovna of Russia, Duchess of Württemberg](https://en.wikipedia.org/wiki/Grand_Duchess_Vera_Constantinovna_of_Russia), and were fascinated by Mathilde Wieland, who led the [Wieland metal works](https://de.wikipedia.org/wiki/Wieland-Werke) for 14 years following her husband's death (Mathildenstraße in Ulm-Oststadt).
 
@@ -66,3 +66,13 @@ Authors of `Eigenwillig und couragiert – Wegweisende Frauen in Ulm und Neu-Ulm
 * Lucia Erdt (Stadt Ulm)
 * Markus Marquardt (ZAWiW, Ulm University)
 * Klaus Urmetzer (Stadt Ulm)
+
+### How to contribute
+
+Send in pull requests. Especially if it improves the usability in any way.
+
+## Changelog
+
+### 2014-11-09
+
+* ADDED: README.md
