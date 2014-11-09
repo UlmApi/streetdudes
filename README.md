@@ -63,6 +63,6 @@ Authors of `Eigenwillig und couragiert – Wegweisende Frauen in Ulm und Neu-Ulm
 
 ### Further support
 
-Lucia Erdt (Stadt Ulm)
-Markus Marquardt (ZAWiW, Ulm University)
-Klaus Urmetzer (Stadt Ulm)
+* Lucia Erdt (Stadt Ulm)
+* Markus Marquardt (ZAWiW, Ulm University)
+* Klaus Urmetzer (Stadt Ulm)
