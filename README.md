@@ -76,3 +76,7 @@ Send in pull requests. Especially if it improves the usability in any way.
 ### 2014-11-09
 
 * ADDED: README.md
+
+### 2014-11-10
+
+* CHANGED: gals.geojson now includes a series of streets previously missing; including information on the name givers (yet to be included into the visualization)
