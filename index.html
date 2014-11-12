@@ -122,75 +122,87 @@
 	});
 </script>
 </head>
+
 <body>
-   <div id="dialog">
-   <h4>&Uuml;ber dieses Projekt</h4>
-<p></p>
+	<div id="dialog">
+		<h4>&Uuml;ber dieses Projekt</h4>
+			<p></p>
+			
+			<p>Dieses Projekt wurde im Rahmen der <a target="_blank" href="http://codeweek.eu/">CodeWeek.EU 2014</a> von der <a target="_blank" href="http://www.ulmapi.de">datalove-Gruppe / UlmAPI</a>  entwickelt. Alle Quellen sind auf <a target="_blank" href="https://github.com/UlmApi/streetdudes">github</a> verfügbar.</p>
+		
+		<h4>Warum?</h4>
+			<p>Bei der Umbenennung des Westplatz in „Theodor-Heuss-Platz“ kam die Frage auf, wie viele Plätze und Straßen eigentlich schon nach Männern benannt sind, und wie viele nach Frauen. Diese Darstellung soll einen Überblick darüber geben. Quelle war das <a href="http://daten.ulm.de/daten/single/strassenverzeichnis-und-gewannnamen">Straßenverzeichnis der Stadt Ulm</a> (<a href="http://creativecommons.org/licenses/by/3.0/de/">CC-BY 3.0 DE</a>), das momentan händisch männlichen und weiblichen Namensgeber_innen zugeordnet wurde. Die Namen und Hintergrundinformationen über die weiblichen Namensgeberinnen wurden uns über ein <a href="http://www.worldcat.org/title/eigenwillig-und-couragiert-wegweisende-frauen-in-ulm-und-neu-ulm/oclc/496271718&referer=brief_results">Buch als Abschlussbericht</a> des Arbeitskreis Frauengeschichte des <a href="http://uulm.de/?zawiw">ZAWiW an der Uni Ulm</a> zur Verfügung gestellt (Danke! :D). Die Straßenzüge wurden daraufhin mit <a href="http://qgis.org/de/site/">QGIS</a> aus der Openstreetmap extrahiert (<a href="http://opendatacommons.org/licenses/odbl/">© OpenStreetMap-Mitwirkende</a>)</p>
 
-<p>Dieses Projekt wurde im Rahmen der <a target="_blank" href="http://codeweek.eu/">CodeWeek.EU 2014</a> von der <a target="_blank" href="http://www.ulmapi.de">datalove-Gruppe / UlmAPI</a>  entwickelt. Alle Quellen sind auf <a target="_blank" href="https://github.com/UlmApi/streetdudes">github</a> verfügbar.</p>
+		<h4>Da ist aber was falsch!</h4>
+			<p>Das kann gut sein. Bei einigen Straßen sind wir uns aktuell noch nicht sicher, ob sie konkret nach Männern oder Frauen benannt wurden. Zum Teil handelt es sich dabei z.B. um Namen Ulmer Patrizierfamilien. Work in Progress, <a target="_blank" href="https://github.com/UlmApi/streetdudes">schickt uns Pull Requests</a>!</p>
 
-<h4>Warum?</h4>
-<p>Bei der Umbenennung des Westplatz in „Theodor-Heuss-Platz“ kam die Frage auf, wie viele Plätze und Straßen eigentlich schon nach Männern benannt sind, und wie viele nach Frauen. Diese Darstellung soll aktuell einen Überblick darüber geben – in späteren Ausbaustufen würden wir gerne die Ergebnisse des ZAWiW integrieren, die hierzu schon den Namensgeber_innen von Ulmer Straßen nachgeforscht haben. Quelle war das <a href="http://daten.ulm.de/daten/single/strassenverzeichnis-und-gewannnamen">Straßenverzeichnis der Stadt Ulm</a> (<a href="http://creativecommons.org/licenses/by/3.0/de/">CC-BY 3.0 DE</a>), das momentan händisch männlichen und weiblichen Namensgeber_innen zugeordnet wurde. Die Straßenzüge wurden daraufhin mit <a href="http://qgis.org/de/site/">QGIS</a> aus der Openstreetmap extrahiert (<a href="http://opendatacommons.org/licenses/odbl/">© OpenStreetMap-Mitwirkende</a>)</p>
+		<h4>Kontakt</h4>
+			<p>WWW: <a target="_blank" href="http://www.ulmapi.de">ulmapi.de</a><br/>
+			Mail: datalove (at) uni-ulm.de <br/>
+			Twitter: <a target="_blank" href="http://twitter.com/ulmapi">@ulmapi</a><br/>
+			</p>
+	</div>
 
-<h4>Da ist aber was falsch!</h4>
-<p>Das kann gut sein. Bei einigen Straßen sind wir uns aktuell noch nicht sicher, ob sie konkret nach Männern oder Frauen benannt wurden. Zum Teil handelt es sich dabei z.B. um Namen Ulmer Patrizierfamilien. Work in Progress, <a target="_blank" href="https://github.com/UlmApi/streetdudes">schickt uns Pull Requests</a>!</p>
-<h4>Kontakt</h4>
-<p>WWW: <a target="_blank" href="http://www.ulmapi.de">ulmapi.de</a><br/>
-Mail: datalove (at) uni-ulm.de <br/>
-Twitter: <a target="_blank" href="http://twitter.com/ulmapi">@ulmapi</a><br/>
-</p>
-   </div>
+	<div id="legend">
+		<h4>StreetDudes</h4>
+			<p>Eine kleine Übersicht über nach Männern und Frauen benannte Straßen Ulms. <a href='#dialog' class='fancybox'>Mehr Informationen über diese Karte</a></p>
+		<h4>Legende</h4>
+			<ul>
+				<li id="Mann"><b>Mann</b></li>
+				<li id="Frau"><b>Frau</b></li>
+			</ul>
+	</div>
 
-   <div id="legend">
-	<h4>StreetDudes</h4>
-	<p>Eine kleine Übersicht über nach Männern und Frauen benannte Straßen Ulms. <a href='#dialog' class='fancybox'>Mehr Informationen über diese Karte</a></p>
-   <h4>Legende</h4>
-   <ul>
-   <li id="Mann"><b>Mann</b></li>
-   <li id="Frau"><b>Frau</b></li>
-   </ul>
-   </div>
-   
-   <div class="logos">
-      <a target="_blank" href="http://www.ulmapi.de"><img src="img/ulmapi.png" alt="ulmapi" title="Ein Projekt von datalove ulm / ulmAPI.de"></a>
-   </div>
+	<div class="logos">
+		<a target="_blank" href="http://www.ulmapi.de"><img src="img/ulmapi.png" alt="ulmapi" title="Ein Projekt von datalove ulm / ulmAPI.de"></a>
+	</div>
 
 
-  <div id="map"></div>
-  <script>
-	  var attr_osm = 'Kartendaten &copy; <a href="http://openstreetmap.org/">OpenStreetMap</a>-Beitragende; Tiles: <a href="http://codefor.de">CfG-Kartenserver</a>';
-      
-    var bbs_ulm = new L.TileLayer('http://tiles.codefor.de/static/bbs/ulm/{z}/{x}/{y}.png', {opacity: 0.7, attribution: attr_osm});
+	<div id="map"></div>
+
+	<script>
+		var attr_osm = 'Kartendaten &copy; <a href="http://openstreetmap.org/">OpenStreetMap</a>-Beitragende; Tiles: <a href="http://codefor.de">CfG-Kartenserver</a>';
+
+		var bbs_ulm = new L.TileLayer('http://tiles.codefor.de/static/bbs/ulm/{z}/{x}/{y}.png', {opacity: 0.7, attribution: attr_osm});
 
 		var map = new L.Map('map').addLayer(bbs_ulm).setView(new L.LatLng(48.4018, 9.99), 14);
 
-var dudeColor = "#998ec3";
-var galColor = "#f1a340";
+		var dudeColor = "#998ec3";
+		var galColor = "#f1a340";
 
-var dudeStyle = {
-    "color": dudeColor,
-    "weight": 5,
-    "opacity": 0.75
-};
+		var dudeStyle = {
+			"color": dudeColor,
+			"weight": 5,
+			"opacity": 0.75
+		};
 
-var galStyle = {
-    "color": galColor,
-    "weight": 5,
-    "opacity": 0.75
-};
+		var galStyle = {
+			"color": galColor,
+			"weight": 5,
+			"opacity": 0.75
+		};
 
-function onEachFeature(feature, layer) {
-    // does this feature have a property named popupContent?
-    if (feature.properties && feature.properties.name) {
-        layer.bindLabel(feature.properties.name);
-    }
-}
-    var streets = new L.LayerGroup();
-    L.geoJson(dudes, { style: dudeStyle , onEachFeature: onEachFeature}).addTo(map);
-    L.geoJson(gals, {style: galStyle, onEachFeature: onEachFeature }).addTo(map);
-    document.getElementById("Mann").style.color=dudeColor;
-    document.getElementById("Frau").style.color=galColor;
-  </script>
+		function onEachFeature(feature, layer) {
+		// does this feature have a property named popupContent?
+			if (feature.properties && feature.properties.name) {
+				layer.bindLabel(feature.properties.name);
+			}
+			if (feature.properties && feature.properties.Lagebezeichnungen_Strassen_BENANNT_NA) {
+				var content = "<strong>" + feature.properties.name + "</strong>, benannt nach " + feature.properties.Lagebezeichnungen_Strassen_BENANNT_NA;
+				if (feature.properties.Lagebezeichnungen_Strassen_URL) {
+				 content = content + "<br><a href=" + feature.properties.Lagebezeichnungen_Strassen_URL + ">Mehr zu dieser Person lesen!</a>";
+				}
+				layer.bindPopup(content);
+			}
+		}
+
+		var streets = new L.LayerGroup();
+		L.geoJson(dudes, { style: dudeStyle , onEachFeature: onEachFeature}).addTo(map);
+		L.geoJson(gals, {style: galStyle, onEachFeature: onEachFeature }).addTo(map);
+		document.getElementById("Mann").style.color=dudeColor;
+		document.getElementById("Frau").style.color=galColor;
+	</script>
+
 </body>
 </html>
 

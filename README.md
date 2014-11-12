@@ -84,3 +84,7 @@ Send in pull requests. Especially if it improves the usability in any way.
 ### 2014-11-11
 
 * CHANGED: dudes.geojson sanitized
+
+### 2014-11-12
+
+* CHANGED: index.html now shows information on the female namegivers
