@@ -2,9 +2,11 @@
 
 A visual presentation of streets in Ulm named after women, and named after men.
 
+**This map is deprecated,** as it is static and depends on tile servers that are no longer maintained. [EqualStreetNames](https://equalstreetnames.org/) does a much better job of this, as it uses [structured data](https://github.com/EqualStreetNames/equalstreetnames/blob/master/docs/README.md) from [Wikidata](https://wikidata.org/). You can work towards making this a reality in your city by adding [etymology tags](https://wiki.openstreetmap.org/wiki/Key:name:etymology:wikidata) in OpenStreetMap. [You can find a German tutorial here](https://www.youtube.com/watch?v=NgleYgCfutw)
+
 ## Background
 
-This map was created as part of a [Codeweek.eu](http://codeweek.eu/) hackathon organized by the [datalove working group at Ulm University](http://www.ulmapi.de). Originally, the idea was to examine street names with colonial backgrounds dating back to times of the German Empire – but, to our pleasant surprise, Ulm has either not followed the “tradition” of other German cities of naming streets after colonies or colonizers, or got rid of problematic street names in the past.
+This map was created as part of a [Codeweek.eu](http://codeweek.eu/) hackathon organized by the [datalove working group at Ulm University](http://www.ulmapi.de). Originally, the idea was to examine street names with colonial backgrounds dating back to times of the German Empire – ~but, to our pleasant surprise, Ulm has either not followed the “tradition” of other German cities of naming streets after colonies or colonizers, or got rid of problematic street names in the past.~ Update 2022: This was a naive stance. In fact, even after renaming e.g. Eselsbergsteige, there still remain street names with racialized contexts or named after contributers of the NS regime. [See this map that was built 2020–2022](https://ulm-raum.de/) by local activists with technical input from our wider community.
 
 However, browsing through the [street name catalogue](http://daten.ulm.de/daten/single/strassenverzeichnis-und-gewannnamen) provided in [the city's Open Data portal](http://daten.ulm.de/), we noticed a rather stark contrast as to the vast number of streets named after men, and the comparatively small number of streets with women as their name patrons. Thus, the idea of visualizing this discrepancy was born and put into practise.
 
@@ -88,3 +90,7 @@ Send in pull requests. Especially if it improves the usability in any way.
 ### 2014-11-12
 
 * CHANGED: index.html now shows information on the female namegivers
+
+### 2022-03-28
+* CHANGED: Deprecation notice
+* CHANGED: Link to Ulmer-Raum
